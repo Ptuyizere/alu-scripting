@@ -2,6 +2,6 @@
 
 input = ARGV[0]
 
-if input =~ /^[A-Z]+$/
-  puts input
-end
+capital_letters = input.scan(/[A-Z]/).join
+
+puts capital_letters unless capital_letters.empty?
