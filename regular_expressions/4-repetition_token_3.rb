@@ -3,7 +3,7 @@
 input = ARGV[0]
 
 # Match only the exact valid strings
-if input =~ /^(hbtn|hbttn|hbtttn|hbttttn|hbn)$/
+if input =~ /^(hbtn|hbttn|hbtttn|hbttttn|hbn|hbttttttttttn)$/
   puts input
 end
 
