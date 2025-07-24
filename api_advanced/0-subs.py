@@ -30,7 +30,12 @@ def number_of_subscribers(subreddit: str):
         int: Number of subscribers or 0 if subreddit is invalid.
     """
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
-    headers = {"User-Agent": "python:subreddit.subscriber.counter:v1.0 (by /u/MUI007)"}
+    headers = {
+        "User-Agent": (
+            "python:subreddit.subscriber.counter:v1.0" 
+            "(by /u/MUI007)"
+        )
+    }
 
     try:
         response = requests.get(url, headers=headers, timeout=10)
@@ -41,4 +46,5 @@ def number_of_subscribers(subreddit: str):
             return 0
     except requests.RequestException:
         return 0
+
 
