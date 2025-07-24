@@ -3,8 +3,7 @@
 """
 0-subs.py.
 
-This module provides a function to retrieve the number of 
-subscribers for a given subreddit using the Reddit API.
+This module has a function to return the number of subs.
 
 Example:
     from 0-subs import number_of_subscribers
@@ -23,8 +22,7 @@ import requests
 
 def number_of_subscribers(subreddit: str):
     """
-    Return the number of subscribers for a given subreddit 
-    or return 0 in the subreddit is invalid.
+    Return the number of subscribers for a given subreddit.
 
     Parameters:
         subreddit (str): The name of the subreddit (without '/r/').
@@ -43,5 +41,4 @@ def number_of_subscribers(subreddit: str):
             return 0
     except requests.RequestException:
         return 0
-
 
