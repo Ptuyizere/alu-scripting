@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+
 import requests
+
 """
 0-subs.py
 
@@ -17,6 +19,7 @@ Requirements:
 
 Author: Patrick Tuyizere
 """
+
 def number_of_subscribers(subreddit: str):
     """
     Return the number of subscribers for a given subreddit or return 0 in the subreddit is invalid.
@@ -39,5 +42,3 @@ def number_of_subscribers(subreddit: str):
             return 0
     except requests.RequestException:
         return 0
-
-print(number_of_subscribers("python"))
