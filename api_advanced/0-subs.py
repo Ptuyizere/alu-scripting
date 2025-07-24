@@ -1,6 +1,22 @@
 #!/usr/bin/python3
 import requests
+"""
+0-subs.py
 
+This module provides a function to retrieve the number of subscribers for a
+given subreddit using the Reddit API.
+
+Example:
+    from 0-subs import number_of_subscribers
+
+    count = number_of_subscribers("python")
+    print(count)
+
+Requirements:
+    - rquests
+
+Author: Patrick Tuyizere
+"""
 def number_of_subscribers(subreddit: str):
     """
     Return the number of subscribers for a given subreddit or return 0 in the subreddit is invalid.
