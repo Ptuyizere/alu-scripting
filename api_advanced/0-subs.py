@@ -20,6 +20,7 @@ Author: Patrick Tuyizere
 
 import requests
 
+# Return the number of subscribers for a given subreddit
 def number_of_subscribers(subreddit: str):
     """
     Return the number of subscribers for a given subreddit or return 0 in the subreddit is invalid.
