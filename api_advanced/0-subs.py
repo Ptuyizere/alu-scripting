@@ -47,3 +47,30 @@ def number_of_subscribers(subreddit: str):
     except requests.RequestException:
         return 0
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
