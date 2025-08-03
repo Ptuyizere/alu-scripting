@@ -1,45 +1,32 @@
 #!/usr/bin/python3
 """
-0-subs.py.
-
-This module has a function to return the number of subs.
-
-Example:
-    from 0-subs import number_of_subscribers
-
-    count = number_of_subscribers("python")
-    print(count)
-
-Requirements:
-    - rquests
-
-Author: Patrick Tuyizere
+Reddit subscriber counter module.
+Provides a function to get the number of subscribers for a subreddit.
 """
-
 
 import requests
 
 
-
-def number_of_subscribers(subreddit: str):
+def number_of_subscribers(subreddit):
     """
-    Return the number of subscribers for a given subreddit.
+    Returns the number of subscribers to a given subreddit.
 
-    Parameters:
-        subreddit (str): The name of the subreddit (without '/r/').
-    Retruns:
-        int: Number of subscribers or 0 if subreddit is invalid.
+    Args:
+        subreddiit (str): The name of the subreddit to query.
+
+    Returns:
+        int: Number of subscribers, or 0 if the subreddit is invalid.
     """
+    if not isinstance(subreddit, str):
+        return 0
+
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
     headers = {
-        "User-Agent": (
-            "python:subreddit.subscriber.counter:v1.0"
-            "(by /u/MUI007)"
-        )
+        "User-Agent": "python:subscriber.fetcher:v1.0 (by /u/yourusername)"
     }
 
     try:
-        response = requests.get(url, headers=headers, timeout=10)
+        response = requests.get(url, headers=headers, allow_redirects=False)
         if response.status_code == 200:
             data = response.json()
             return data.get("data", {}).get("subscribers", 0)
