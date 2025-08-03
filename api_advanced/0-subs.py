@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 0-subs.py.
 
@@ -17,7 +16,9 @@ Requirements:
 Author: Patrick Tuyizere
 """
 
+
 import requests
+
 
 
 def number_of_subscribers(subreddit: str):
