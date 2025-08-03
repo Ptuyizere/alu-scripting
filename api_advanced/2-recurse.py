@@ -1,7 +1,16 @@
 #!/usr/bin/python3
 """
-Reddit hot article fetcher module.
-Provides a recursive function to get all hot article titles for a subreddit.
+2-recurse.py module
+
+This module provides a recursive function to get all hot article
+titles for a subreddit.
+
+Features:
+    - Connects to the reddit API
+    - Retrieves all hot article titles for a given subreddit
+
+Usage:
+    Import this module in your code and call the recursive function 'recurse'
 """
 
 import requests
